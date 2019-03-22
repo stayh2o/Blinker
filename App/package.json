@@ -1,0 +1,22 @@
+{
+  "name": "blinker",
+  "version": "1.0.0",
+  "description": "An eye blink reminder desktop application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exxxor/Blinker.git"
+  },
+  "author": "Team EXOR",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/exxxor/Blinker/issues"
+  },
+  "homepage": "https://github.com/exxxor/Blinker#readme",
+  "dependencies": {
+    "electron": "^4.1.1"
+  }
+}
