@@ -1,7 +1,16 @@
+const electron  = require('electron');
+const path      = require('path');
+const url       = require('url');
+var screenElectron = electron.screen;
+var mainScreen = screenElectron.getPrimaryDisplay();
+var mainScreen = screenElectron.getPrimaryDisplay();
+var dimensions = mainScreen.size;
+// const {app, BrowserWindow} = electron;
+
 function start_python_func() {
     console.log("ElectronJs made a call to Python");
     var path = require("path");
-    var {PythonShell} = require('python-shell')
+    var {PythonShell} = require('python-shell');
 
     var options = {
         scriptPath: path.join(__dirname, '/engine/'),
@@ -35,7 +44,19 @@ function start_python_func() {
             if (data.notification == 1) {
                 myNotification = new window.Notification(notification.title, notification);
             }
+            if(data.black == 1){
+                splash = new electron.remote.BrowserWindow({
+                    width: dimensions.width, 
+                    height: dimensions.height, 
+                    transparent: false, 
+                    frame: false, 
+                    alwaysOnTop: true,
+                    fullscreen: true
+                });
+                splash.loadURL(`file://${__dirname}/splash.html`);  
+                setTimeout(function () { splash.close();}, 600);
+            }
         });
-    })
+    });
 }
 

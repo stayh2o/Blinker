@@ -1,1 +1,0 @@
-{"status":1,"twenty":0,"notification":0,"interval":5}

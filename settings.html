@@ -166,7 +166,13 @@
 		document.getElementById('textInput').innerHTML = timeValues[value];
 	}
 	function saveConfiguration(flag) {
-		data = {"status":0,"twenty":0,"notification":0,"interval":5};
+		data = {
+			"status":0,
+			"twenty":0,
+			"notification":0,
+			"interval":5,
+			"black":1
+		};
  		if (document.getElementById('startBtn').checked) {
 			data.status = 1;
 		}

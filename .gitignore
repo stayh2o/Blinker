@@ -1,2 +1,3 @@
-App/node_modules/
-blinkCount/shape_predictor_68_face_landmarks.dat
+node_modules/
+engine/shape_predictor_68_face_landmarks.dat
+*.pyc
