@@ -27,8 +27,19 @@
 		position: fixed; /* or absolute */
 		top: 50%;
 		left: 50%;
+        display: inline-block;
 		transform: translate(-50%, -50%);
+        
 	}
+    .center .img-top{
+        display:none;
+    }
+    .center:hover .img-top{
+        display:inline;
+    }
+    .center:hover .img-bot{
+        display:none;
+    }
     #form-outer {
         background-color: rgb(250, 250, 250);
         margin: 0 auto;
@@ -101,7 +112,8 @@
 <br>
 <!-- <h1 id="title"><img src="images/Hlogo.png" height="60px" width="150px"></h1> -->
 <div class="center">
-    <img class="thick-green-border smaller-image"src="images/index.gif">
+    <img class="thick-green-border smaller-image img-bot"src="images/static.png" alt="static eye">
+    <img class="thick-green-border smaller-image img-top"src="images/index.gif" alt="gif eye">
     <h2>W E L C O M E</h2>
     <p>Are you ready to blink?</p>
     <button id="submit" onclick = "location.href='about.html'">Continue > </button>

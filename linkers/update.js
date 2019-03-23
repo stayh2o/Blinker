@@ -21,7 +21,7 @@ function start_python_func() {
                 data = await JSON.parse(contents);
                 console.log(data);
                 if (data.twenty == 1 && data.status == 1) {
-                    swal("20 Minutes Reminder, Look at a far object");
+                    swal("20 minutes reminder! Look at a far object.");
                 }
             });
         }
