@@ -241,7 +241,12 @@
 			document.getElementById('splashscreen').checked = true;
 		}
 		document.getElementById('textInput').innerHTML = data.interval;
+		document.getElementById('exercise').innerHTML = data.exercise;
+		document.getElementById('longe').innerHTML = data.longe;
 		document.getElementById("timeInterval").value = revValues[data.interval+""];
+		document.getElementById("timeInterval1").value = revValues[data.exercise+""];
+		document.getElementById("timeInterval2").value = revValues[data.longe+""];
+		
 	}
 	window.onload = function() {
 		var fs = require('fs');
@@ -274,14 +279,14 @@
 		<div>
 			<h3>Time Interval for Small Eye exercise: <a id="exercise">5</a></h3>
 			</label>
-			<input type="range" id="timeInterval" min="0" max="4" value="0" step="1" onchange="updateTimeText1(this.value);">
+			<input type="range" id="timeInterval1" min="0" max="4" value="0" step="1" onchange="updateTimeText1(this.value);">
 			<br/>
 		</div>
 
 		<div>
 			<h3>Time Interval for Long Eye exercise: <a id="longe">5</a></h3>
 			</label>
-			<input type="range" id="timeInterval" min="0" max="4" value="0" step="1" onchange="updateTimeText2(this.value);">
+			<input type="range" id="timeInterval2" min="0" max="4" value="0" step="1" onchange="updateTimeText2(this.value);">
 			<br/>
 		</div>
 
