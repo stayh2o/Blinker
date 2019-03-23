@@ -31,6 +31,7 @@ function start_python_func() {
         if (message == "Reminder") {
             return;
         }
+        console.log(message);
         var notification = {
             title:'Eye Blink Alert',
             body: 'Your Blink last minute was: ' + message,

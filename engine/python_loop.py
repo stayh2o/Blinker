@@ -12,7 +12,6 @@ def twenty_rule():
 
 twenty_rule()
 
-stats_file = open("engine/stats.csv","a")
 
 def read_config():
     with open('config.js') as data_file:
@@ -39,6 +38,7 @@ while start:
         print(finalCount)
         sys.stdout.flush()
         stats_file.write(str(datetime.datetime.now())+","+str(finalCount)+"\n")
+        stats_file.close()
     else:
         start = False
 
