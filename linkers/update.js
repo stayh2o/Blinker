@@ -1,11 +1,9 @@
-const electron  = require('electron');
-const path      = require('path');
-const url       = require('url');
-var screenElectron = electron.screen;
-var mainScreen = screenElectron.getPrimaryDisplay();
-var mainScreen = screenElectron.getPrimaryDisplay();
-var dimensions = mainScreen.size;
-// const {app, BrowserWindow} = electron;
+const electron      = require('electron');
+const path          = require('path');
+const url           = require('url');
+const screenElectron  = electron.screen;
+const mainScreen      = screenElectron.getPrimaryDisplay();
+const dimensions      = mainScreen.size;
 
 function start_python_func() {
     console.log("ElectronJs made a call to Python");
@@ -46,17 +44,16 @@ function start_python_func() {
             }
             if(data.black == 1){
                 splash = new electron.remote.BrowserWindow({
-                    width: dimensions.width, 
-                    height: dimensions.height, 
-                    transparent: false, 
-                    frame: false, 
+                    width: dimensions.width,
+                    height: dimensions.height,
+                    transparent: false,
+                    frame: false,
                     alwaysOnTop: true,
                     fullscreen: true
                 });
-                splash.loadURL(`file://${__dirname}/splash.html`);  
+                splash.loadURL(`file://${__dirname}/splash.html`);
                 setTimeout(function () { splash.close();}, 600);
             }
         });
     });
 }
-
