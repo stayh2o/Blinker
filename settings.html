@@ -171,7 +171,7 @@
 			"twenty":0,
 			"notification":0,
 			"interval":5,
-			"black":1
+			"black":0
 		};
  		if (document.getElementById('startBtn').checked) {
 			data.status = 1;
@@ -181,6 +181,9 @@
 		}
  		if (document.getElementById('notification').checked) {
 			data.notification = 1;
+		}
+		if (document.getElementById('splashscreen').checked) {
+			data.black = 1;
 		}
  		data.interval = parseInt(document.getElementById('textInput').innerHTML);
  		console.log(data);
@@ -201,7 +204,9 @@
 	function updateNotif() {
 		console.log("Notification");
 	}
-
+	function updateSplash(){
+		console.log("Splash Screen")
+	}
 	var data_fetched = null;
 	function setValues(data) {
 		document.getElementById('startBtn').checked = true;
@@ -220,6 +225,9 @@
 		}
 		if (data.notification == 1) {
 			document.getElementById('notification').checked = true;
+		}
+		if(data.black ==1) {
+			document.getElementById('splashscreen').checked = true;
 		}
 		document.getElementById('textInput').innerHTML = data.interval;
 		document.getElementById("timeInterval").value = revValues[data.interval+""];
@@ -254,15 +262,20 @@
 
 		<label class="container">
 			<input type="checkbox" id="twenty" value="1" onchange="updateTwenty()">
-			<span class="checkmark"></span><h3>Enable 20-20-20 </h3>
+			<span class="checkmark"></span><h3>20-20-20 </h3>
 		</label>
 
 		<label class="container">
 			<input type="checkbox" id="notification" value="1" onchange="updateNotif()">
-			<span class="checkmark"></span> <h3>Enable notifications </h3>
+			<span class="checkmark"></span> <h3>Notifications </h3>
+		</label>
+		<label class="container">
+			<input type="checkbox" id="splashscreen" value="1" onchange="updateSplash()">
+			<span class="checkmark"></span> <h3>Splash screen</h3>
 		</label>
 	</div>
 
+	<a onclick="location.href='./aboutSettings.html'" class="myButton">About</a>
 	<a onclick="location.href='./statistics.html'" class="myButton">Show Statistics</a>
 	<a onclick="saveConfiguration(true)" class="myButton">Save Changes</a>
 

@@ -29,7 +29,12 @@
         padding: 10px;
         padding-top: 20px;
     }
-
+    .center {
+		position: fixed; /* or absolute */
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
     button {
         background-color: #59ace0;
         border-radius: 4px;
@@ -42,12 +47,7 @@
         overFlow: hidden;
         cursor: pointer;
     }
-    .center {
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
+
     .deactivated {
         background-color: #aaa;
         border-radius: 4px;
@@ -91,62 +91,44 @@
 
 </style>
 
-<script type="text/javascript">
-    function agreement()
-    {
-        if (document.getElementById("agree").checked) {
-            document.getElementById("begin").setAttribute("onclick", "location.href='settings.html'");
-            document.getElementById("begin").setAttribute("class", "activated");
-        }
-        else {
-            document.getElementById("begin").setAttribute("onclick", "");
-            document.getElementById("begin").setAttribute("class", "deactivated");
-        }
-    }
-</script>
+
 
 <body>
 <h1 id="title"></h1>
 <div id="form-outer" class="center">
 
 <h3 id="description"><b>
-    Features </b>
+    Settings Explained </b>
 </h3>
 
 <hr width="70%" style="border: 1px solid#D3D3D3;">
 
 <div style="margin: auto;width: 540px">
     <div id="block_container">
-        <div id="bloc1"><img src="images/graph.png"></img></div>
-        <div id="bloc2"><h4>Quantitative Analysis</h4><p>Statistical view of user's eye blinks while using the system</p></div>
+        <div id="bloc2"><h4>Enable Camera</h4><p>Enable the application to check blink rate in the background</p></div>
     </div>
 
     <div id="block_container">
-        <div id="bloc1"> <img src="images/eye.png"></img></div>
-        <div id="bloc2"><h4>Notification Driven</h4>
-            <p>Eye strain can be remedied with the helpful 20-20-20 rule</p>
+        <div id="bloc2"><h4>Time Interval</h4>
+            <p>Select the time interval for checking blink rate and splash screen</p>
         </div>
     </div>
 
     <div id="block_container">
-        <div id="bloc1"> <img src="images/comp.png"></img></div>
-        <div id="bloc2"> <h4>Platform Independent</h4>
-        <p>Runs seamlessly on macOS, Windows and Linux</p></div>
+        <div id="bloc2"> <h4>Enable 20-20-20</h4>
+        <p>Enable reminder for looking at a far object every 20 minutes</p></div>
     </div>
+
+    <div id="block_container">
+        <div id="bloc2"> <h4>Enable Notification</h4>
+        <p>Enable notifications aout blink rate for given time interval</p></div>
+    </div>
+    
 
 </div>
 
-<hr width="70%" style="border: 1px solid#D3D3D3;">
-
-<label>
-    <input id="agree" value="1" type="checkbox" class="userRatings" onchange="agreement()">Always allow Camera when application runs
-</label>
-
-<hr width="70%" style="border: 1px solid#D3D3D3;">
-
 <div class="algn">
-    <button id="back" onclick="location.href='index.html'">Back</button>
-    <button id="begin" class="deactivated" onclick="" >Let's Begin!</button>
+    <button id="back" onclick="location.href='settings.html'">Back</button>
 </div>
 
 </div>

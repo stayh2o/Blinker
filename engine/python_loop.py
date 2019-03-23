@@ -10,9 +10,6 @@ def twenty_rule():
     sys.stdout.flush()
     threading.Timer(1200,twenty_rule).start()
 
-print("This works")
-sys.stdout.flush()
-
 twenty_rule()
 
 stats_file = open("engine/stats.csv","a")

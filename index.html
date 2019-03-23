@@ -23,7 +23,12 @@
         font-weight: bold;
         margin: 20px;
     }
-
+    .center {
+		position: fixed; /* or absolute */
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
     #form-outer {
         background-color: rgb(250, 250, 250);
         margin: 0 auto;
@@ -99,8 +104,9 @@
 
 <br>
 <!-- <h1 id="title"><img src="images/Hlogo.png" height="60px" width="150px"></h1> -->
-
+<div class="center">
 <img class="thick-green-border smaller-image"src="images/index.gif">
 <h2>W E L C O M E</h2>
 <p>Are you ready to blink?</p>
 <button id="submit" onclick = "location.href='about.html'">Continue > </button>
+</div>>
