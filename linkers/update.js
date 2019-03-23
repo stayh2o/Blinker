@@ -27,6 +27,13 @@ function start_python_func() {
             });
         }
     })
+
+    instance.on("message", function(message) {
+        if(message == "lexe"){
+            console.log("fuck yea");
+        }
+    })
+
     instance.on('message', function(message) {
         if (message == "exe") {
             var fs = require('fs');
