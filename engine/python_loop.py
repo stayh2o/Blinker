@@ -21,7 +21,16 @@ def read_config():
     set_time = int( data_item['interval'])*60
     return(start,set_time)
 
+def short_exc():
+    with open('config.js') as data_file:
+        data_item = json.load(data_file)
 
+    set_time = int( data_item['Excercise'])*60
+    print("exe")
+    sys.stdout.flush()
+    threading.Timer(set_time,short_exc).start() 
+
+short_exc()
 
 start, set_time = read_config()
 

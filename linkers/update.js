@@ -28,7 +28,12 @@ function start_python_func() {
         }
     })
     instance.on('message', function(message) {
-        if (message == "Reminder") {
+        if (message == "exe") {
+                console.log("Blink bitch")
+            };
+    })
+    instance.on('message', function(message) {
+        if (message == "Reminder" || message== "exe") {
             return;
         }
         var data =[
