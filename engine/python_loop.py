@@ -5,12 +5,15 @@ import datetime
 import sys
 import threading
 
-def twenty_rule():
-    print("Reminder")
-    sys.stdout.flush()
-    threading.Timer(1200,twenty_rule).start()
 
-twenty_rule()
+
+def twenty_rule(*argv):
+    if(argv[0]!=0):
+        print("Reminder")
+        sys.stdout.flush()
+    threading.Timer(1200,twenty_rule,args=[1]).start()
+    
+twenty_rule(0)
 
 
 def read_config():
@@ -21,16 +24,16 @@ def read_config():
     set_time = int( data_item['interval'])*60
     return(start,set_time)
 
-def short_exc():
+def short_exc(*argv):
     with open('config.js') as data_file:
         data_item = json.load(data_file)
+    set_time = int( data_item['exercise'])*60
+    if(argv[0]!=0):
+        print("exe")
+        sys.stdout.flush()
+    threading.Timer(set_time,short_exc,args=[1]).start() 
 
-    set_time = int( data_item['Excercise'])*60
-    print("exe")
-    sys.stdout.flush()
-    threading.Timer(set_time,short_exc).start() 
-
-short_exc()
+short_exc(0)
 
 start, set_time = read_config()
 

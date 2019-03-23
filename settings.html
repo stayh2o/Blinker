@@ -167,7 +167,7 @@
 	}
 
 	function updateTimeText1(value) {
-		document.getElementById('Excercise').innerHTML = timeValues[value];
+		document.getElementById('exercise').innerHTML = timeValues[value];
 	}
 
 	function saveConfiguration(flag) {
@@ -176,7 +176,7 @@
 			"twenty": 0,
 			"notification": 0,
 			"interval": 5,
-			"Excercise":5,
+			"exercise":5,
 			"black": 0
 		};
  		if (document.getElementById('startBtn').checked) {
@@ -192,7 +192,7 @@
 			data.black = 1;
 		}
  		data.interval = parseInt(document.getElementById('textInput').innerHTML);
-		data.Excercise = parseInt(document.getElementById('Excercise').innerHTML);
+		data.exercise = parseInt(document.getElementById('exercise').innerHTML);
  		console.log(data);
  		var fs = require('fs');
  		try {
@@ -268,7 +268,7 @@
 		</div>
 
 		<div>
-			<h3>Time Interval for Eye Excercise: <a id="Excercise">5</a></h3>
+			<h3>Time Interval for Eye exercise: <a id="exercise">5</a></h3>
 			</label>
 			<input type="range" id="timeInterval" min="0" max="4" value="0" step="1" onchange="updateTimeText1(this.value);">
 			<br/>
