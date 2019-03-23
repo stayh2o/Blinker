@@ -165,12 +165,18 @@
 	function updateTimeText(value) {
 		document.getElementById('textInput').innerHTML = timeValues[value];
 	}
+
+	function updateTimeText1(value) {
+		document.getElementById('Excercise').innerHTML = timeValues[value];
+	}
+
 	function saveConfiguration(flag) {
 		data = {
 			"status": 0,
 			"twenty": 0,
 			"notification": 0,
 			"interval": 5,
+			"Excercise":5,
 			"black": 0
 		};
  		if (document.getElementById('startBtn').checked) {
@@ -186,6 +192,7 @@
 			data.black = 1;
 		}
  		data.interval = parseInt(document.getElementById('textInput').innerHTML);
+		data.Excercise = parseInt(document.getElementById('Excercise').innerHTML);
  		console.log(data);
  		var fs = require('fs');
  		try {
@@ -259,6 +266,14 @@
 			<input type="range" id="timeInterval" min="0" max="4" value="0" step="1" onchange="updateTimeText(this.value);">
 			<br/>
 		</div>
+
+		<div>
+			<h3>Time Interval for Eye Excercise: <a id="Excercise">5</a></h3>
+			</label>
+			<input type="range" id="timeInterval" min="0" max="4" value="0" step="1" onchange="updateTimeText1(this.value);">
+			<br/>
+		</div>
+
 
 		<label class="container">
 			<input type="checkbox" id="twenty" value="1" onchange="updateTwenty()">
