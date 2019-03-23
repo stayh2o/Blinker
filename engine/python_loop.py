@@ -21,7 +21,7 @@ def read_config():
     set_time = int( data_item['interval'])*60
     return(start,set_time)
 
-stats_file = open("engine/stats.csv","a")
+
 
 start, set_time = read_config()
 
@@ -37,6 +37,7 @@ while start:
     if finalCount != -1:
         print(finalCount)
         sys.stdout.flush()
+        stats_file = open("engine/stats.csv","a")
         stats_file.write(str(datetime.datetime.now())+","+str(finalCount)+"\n")
         stats_file.close()
     else:

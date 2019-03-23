@@ -6,7 +6,7 @@ import cv2,json
 import time,os
 import datetime
 
-thresh = 0.18
+thresh = 0.19
 
 detect = dlib.get_frontal_face_detector()
 predict = dlib.shape_predictor("engine/shape_predictor_68_face_landmarks.dat")# Dat file is the crux of the code
