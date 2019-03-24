@@ -12,7 +12,7 @@ def twenty_rule(*argv):
         print("Reminder")
         sys.stdout.flush()
     threading.Timer(1200,twenty_rule,args=[1]).start()
-    
+
 twenty_rule(0)
 
 
@@ -31,7 +31,7 @@ def short_exc(*argv):
     if(argv[0]!=0):
         print("exe")
         sys.stdout.flush()
-    threading.Timer(set_time,short_exc,args=[1]).start() 
+    threading.Timer(75,short_exc,args=[1]).start()
 
 short_exc(0)
 
@@ -42,8 +42,8 @@ def long_exec(*argv):
     if(argv[0]!=0):
         print("longe")
         sys.stdout.flush()
-    threading.Timer(set_time,long_exec,args=[1]).start() 
-    
+    threading.Timer(60,long_exec,args=[1]).start() 
+
 long_exec(0)
 
 start, set_time = read_config()
