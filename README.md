@@ -17,6 +17,7 @@
 + [Getting Started](#getting_started)
 + [Built With](#built_with)
 + [Future Scope](#future_scope)
++ [File Structure](#file_structure)
 + [Contributing](#contributing)
 + [Authors](#authors)
 
@@ -36,15 +37,20 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install the software and how to install them
 
+Installing NodeJs
+```
+$ sudo apt-get install nodejs
+```
 Installing Electron
 ```
 $ npm install electron -g
 ```
-Installing Python
+Installing Python3
 ```
 $ sudo apt-get install python3
 ```
-Download the shape_predictor_68_face_landmarks.dat [here](https://github.com/akshaybahadur21/Drowsiness_Detection/raw/master/shape_predictor_68_face_landmarks.dat) 
+Download the shape_predictor_68_face_landmarks.dat [here](https://github.com/akshaybahadur21/Drowsiness_Detection/raw/master/shape_predictor_68_face_landmarks.dat)
+
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running
@@ -60,6 +66,7 @@ $ npm install
 $ cd engine
 $ pip3 -r install requirements.txt
 ```
+Copy paste the shape_predictor_68_face_landmarks.dat in the /Blinker/engine/ directory
 If you are running a development environment, use the following command:
 ```
 $ npm start 
@@ -68,12 +75,18 @@ $ npm start
 The application will now be running in a window on your screen.
 
 ## Built With<a name="built_with"></a>
-+ [Electron](https://www.mongodb.com/) - Application framework
-+ [Python3](https://expressjs.com/) - Engine 
++ [Electron](https://electronjs.org/) - Application framework
++ [Python3](https://www.python.org/) - Engine 
 
 ## Future Scope<a name="future_scope"></a>
 + Tracking Body Posture.
 
+## File Structure <a name="file_structure"></a>
+/        : Desktop Application code
+/engine  : Python application which implements Computer Vision <br>
+/images  : All the images used <br>
+/linkers : Connection between application and engine <br>
+/min     : Minified JS, CSS
 
 ## Contributing<a name="contributing"></a>
 
