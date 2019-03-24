@@ -27,13 +27,6 @@ function start_python_func() {
             });
         }
     })
-
-    instance.on("message", function(message) {
-        if(message == "lexe"){
-            console.log("fuck yea");
-        }
-    })
-
     instance.on('message', function(message) {
         if (message == "exe") {
             var fs = require('fs');
@@ -53,10 +46,29 @@ function start_python_func() {
                     setTimeout(function(){ excer.close();}, 15000);
                 }
             })
-        };
+        }
+        else if(message == "longe"){
+            var fs = require('fs');
+            console.log('works till here2')
+            fs.readFile('config.js','utf8',async function(err,contents){
+                data = await JSON.parse(contents);
+                console.log(data)
+                if(data.longe >= 1){
+                    lexcer = new electron.remote.BrowserWindow({
+                        width : dimensions.width/2,
+                        height : dimensions.height/2,
+                        transparent : false,
+                        frame : false,
+                        alwaysOnTop : true,
+                    });
+                    lexcer.loadURL(`file://${__dirname}/longExcer.html`);
+                    setTimeout(function(){ lexcer.close();}, 60000);
+                }
+            })
+        }
     })
     instance.on('message', function(message) {
-        if (message == "Reminder" || message== "exe") {
+        if (message == "Reminder" || message== "exe" || message == "longe") {
             return;
         }
         var data =[

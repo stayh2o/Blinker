@@ -35,6 +35,17 @@ def short_exc(*argv):
 
 short_exc(0)
 
+def long_exec(*argv):
+    with open('config.js') as data_file:
+        data_item = json.load(data_file)
+    set_time = int( data_item['longe'])*60
+    if(argv[0]!=0):
+        print("longe")
+        sys.stdout.flush()
+    threading.Timer(set_time,long_exec,args=[1]).start() 
+    
+long_exec(0)
+
 start, set_time = read_config()
 
 
