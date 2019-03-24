@@ -7,6 +7,7 @@
         background: -moz-linear-gradient(-45deg, #93cede 0%, #75bdd1 41%, #84edb0 100%); /* FF3.6-15 */
         background: -webkit-linear-gradient(-45deg, #93cede 0%, #75bdd1 41%, #84edb0 100%); /* Chrome10-25,Safari5.1-6 */
         background: linear-gradient(135deg, #0099ff 0%, #0099cc 41%, #33cccc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        background: radial-gradient(circle, #000, #212121);
         font-size: 14px;
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#84edb0',GradientType=1 );
         text-align: center;
@@ -36,16 +37,29 @@
 		transform: translate(-50%, -50%);
 	}
     button {
-        background-color: #59ace0;
-        border-radius: 4px;
+        background-color: #1b5e20;
+        border-radius: 20px;
         color: white;
         font-size: 1em;
-        height: 40px;
-        width: 96px;
+        height: 37px;
+        font-weight: 500;
+        text-transform: uppercase;
+        touch-action: manipulation;
+        transition-duration: 33ms;
+        transition-property: background-color, border-color, color, box-shadow, filter, transform;
+        transform: translate3d(0px, 0px, 0px);
+        font-family: Circular, Helvetica, Arial, sans-serif;
         margin: 10px;
         border: 0px solid;
-        overFlow: hidden;
+        padding-top: 10px;
+        padding-right: 35px;
+        padding-bottom: 10px;
+        padding-left: 35px;
         cursor: pointer;
+    }
+
+    .button:hover {
+        background-color:rgb(29, 185, 84);
     }
 
     .deactivated {
@@ -123,12 +137,12 @@
         <div id="bloc2"> <h4>Enable Notification</h4>
         <p>Enable notifications aout blink rate for given time interval</p></div>
     </div>
-    
+
 
 </div>
 
 <div class="algn">
-    <button id="back" onclick="location.href='settings.html'">Back</button>
+    <button id="back" class="button" onclick="location.href='settings.html'">Back</button>
 </div>
 
 </div>

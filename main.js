@@ -1,16 +1,26 @@
-const electron  = require('electron');
-const path      = require('path');
-const url       = require('url');
+const electron        = require('electron');
+const path            = require('path');
+const url             = require('url');
 
 const {app, BrowserWindow, Menu, clipboard} = electron;
 
 app.on('ready', () => {
-    mainWindow = new BrowserWindow({ backgroundColor: '#0099cc' });
+    const screenElectron  = electron.screen;
+    const mainScreen      = screenElectron.getPrimaryDisplay();
+    const dimensions      = mainScreen.size;
+    mainWindow = new BrowserWindow({
+        backgroundColor: '#000',
+        height: 900,
+        width: 1200,
+        transparent: false,
+        frame: true
+    });
     mainWindow.loadURL(url.format({
         pathname: path.join(__dirname, 'index.html'),
         protocol: 'file:',
         slashes:  true
     }));
+
     mainWindow.on('closed', () => {
         app.quit();
     });

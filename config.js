@@ -1,1 +1,1 @@
-{"status":1,"twenty":1,"notification":1,"interval":10,"exercise":10,"longe":5,"black":1}
+{"status":1,"twenty":1,"notification":1,"interval":5,"exercise":5,"longe":10,"black":1}

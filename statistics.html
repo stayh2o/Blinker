@@ -21,7 +21,7 @@ async function csvToJSON(csv) {
         }
         result.push(obj);
     }
-  return result;
+    return result;
 }
 
 var csvdata = [];
@@ -115,21 +115,29 @@ window.onload = async function() {
     -moz-box-shadow: 0px 0px 0px 0px #b5b5b5;
     -webkit-box-shadow: 0px 0px 0px 0px #b5b5b5;
     box-shadow: 0px 0px 0px 0px #b5b5b5;
-    background-color:#7ce699;
-    -moz-border-radius:8px;
-    -webkit-border-radius:8px;
-    border-radius:8px;
-    border:1px solid #ffffff;
-    display:inline-block;
-    cursor:pointer;
-    color:#000000;
-    font-family:Courier New;
-    font-size:15px;
-    padding:13px 40px;
+    background-color: #1b5e20;
+    border-radius: 20px;
+    color: white;
+    font-size: 1em;
+    height: 37px;
+    font-weight: 500;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transition-duration: 33ms;
+    transition-property: background-color, border-color, color, box-shadow, filter, transform;
+    transform: translate3d(0px, 0px, 0px);
+    font-family: Circular, Helvetica, Arial, sans-serif;
+    margin: 10px;
+    border: 0px solid;
+    padding-top: 10px;
+    padding-right: 35px;
+    padding-bottom: 10px;
+    padding-left: 35px;
+    cursor: pointer;
     text-decoration:none;
 }
 .myButton:hover {
-    background-color:#3ccefa;
+    background-color:rgb(29, 185, 84);
 }
 .myButton:active {
     position:relative;
@@ -140,6 +148,7 @@ body {
     background: -moz-linear-gradient(-45deg, #93cede 0%, #75bdd1 41%, #84edb0 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(-45deg, #93cede 0%,#75bdd1 41%,#84edb0 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg, #0099ff 0%, #0099cc 41%, #33cccc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: radial-gradient(circle, #000, #212121);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#84edb0',GradientType=1 );
 }
 .content {
@@ -186,6 +195,7 @@ body {
     <div class="container" style="margin: auto;margin: 10px">
         <canvas id="myChart"></canvas>
     </div>
+        <br><br>
         <a href='./settings.html' class="myButton">Go Back</a>
     </div>
 

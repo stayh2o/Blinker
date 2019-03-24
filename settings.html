@@ -16,12 +16,13 @@
 		background: -moz-linear-gradient(-45deg, #93cede 0%, #75bdd1 41%, #84edb0 100%); /* FF3.6-15 */
 		background: -webkit-linear-gradient(-45deg, #93cede 0%,#75bdd1 41%,#84edb0 100%); /* Chrome10-25,Safari5.1-6 */
 		background: linear-gradient(135deg, #0099ff 0%, #0099cc 41%, #33cccc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		background: radial-gradient(circle, #000, #212121);
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#84edb0',GradientType=1 );
 	}
 	.content {
 		padding: 30px;
 		background: white;
-		width: 70%;
+		width: 80%;
 		max-width: 900px;
 		min-width: 500px;
 		text-align: center;
@@ -147,15 +148,27 @@
 	-o-transition: All 0.3s ease;
 }
 .myButton {
-	background-color: #59ace0;
-	border-radius: 4px;
+	background-color: #1b5e20;
+	border-radius: 20px;
 	color: white;
 	font-size: 1em;
+	text-transform: uppercase;
 	height: 40px;
 	width: 96px;
 	margin: 10px;
 	border: 0px solid;
 	padding: 10px;
+	cursor: pointer;
+	vertical-align: text-bottom;
+}
+.myButton:hover {
+    background-color:rgb(29, 185, 84);
+}
+.myText {
+margin: 10px;
+	height: 37px;
+	font-weight: 500;
+	color: #212121;
 	cursor: pointer;
 }
 
@@ -165,7 +178,6 @@
 	function updateTimeText(value) {
 		document.getElementById('textInput').innerHTML = timeValues[value];
 	}
-
 	function updateTimeText1(value) {
 		document.getElementById('exercise').innerHTML = timeValues[value];
 	}
@@ -246,7 +258,7 @@
 		document.getElementById("timeInterval").value = revValues[data.interval+""];
 		document.getElementById("timeInterval1").value = revValues[data.exercise+""];
 		document.getElementById("timeInterval2").value = revValues[data.longe+""];
-		
+
 	}
 	window.onload = function() {
 		var fs = require('fs');
@@ -277,14 +289,14 @@
 		</div>
 
 		<div>
-			<h3>Time Interval for Small Eye exercise: <a id="exercise">5</a></h3>
+			<h3>Time Interval for small exercise: <a id="exercise">5</a></h3>
 			</label>
 			<input type="range" id="timeInterval1" min="0" max="4" value="0" step="1" onchange="updateTimeText1(this.value);">
 			<br/>
 		</div>
 
 		<div>
-			<h3>Time Interval for Long Eye exercise: <a id="longe">5</a></h3>
+			<h3>Time Interval for long exercise: <a id="longe">5</a></h3>
 			</label>
 			<input type="range" id="timeInterval2" min="0" max="4" value="0" step="1" onchange="updateTimeText2(this.value);">
 			<br/>
@@ -306,11 +318,11 @@
 			<span class="checkmark"></span> <h3>Splash screen</h3>
 		</label>
 	</div>
-
-	<a onclick="location.href='./aboutSettings.html'" class="myButton">About</a>
-	<a onclick="location.href='./statistics.html'" class="myButton">Show Statistics</a>
-	<a onclick="saveConfiguration(true)" class="myButton">Save Changes</a>
-
+	<div >
+	<a onclick="saveConfiguration(true)" class="myButton">Save Changes</a><br><br>
+	<a onclick="location.href='./aboutSettings.html'" class="myText">About</a>
+	<a onclick="location.href='./statistics.html'" class="myText">Show Statistics</a>
+	</div>
 </div>
 </body>
 
