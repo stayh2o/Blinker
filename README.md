@@ -22,8 +22,8 @@
 + [Authors](#authors)
 
 ## About<a name="description"></a>
-+ Blinker is an application designed o solve a normal problem faced by a large percentage of the population i.e the rate of blinking reduces by 3-4 times when working/reading/watching something on the screen.
-+ Our mission is to remind user and help them change their habits.
++ Blinker is an application designed to solve a normal problem faced by a large percentage of the population i.e. the rate of blinking reduces by 3-4 times when working/reading/watching something on the screen.
++ Our mission is to remind the user and to help them change their habits.
 + When reading, the rate of blinking decreases to about 3 to 4 times per minute which is a major reason that eyes become    fatigued while reading.
 + When the eyes dry out or become fatigued due to reading on a computer screen, it can be an indication of Computer Vision Syndrome.
 + Blinking provides moisture to the eye by irrigation using tears and a lubricant the eyes secrete.
