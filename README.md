@@ -1,24 +1,22 @@
 <div align="center">
-  
-![Blinker](https://imgur.com/aS8afyM.png)
 
-[![Hackathon](https://img.shields.io/badge/hackathon-C2C-orange.svg)](http://c2c.acmvit.in) 
-[![Status](https://img.shields.io/badge/status-active-green.svg)]() 
-[![Github Issues](http://githubbadges.herokuapp.com/exxxor/Blinker/issues.svg?style=flat-square)](https://github.com/exxxor/Blinker/issues) 
-[![Pending Pull-Requests](http://githubbadges.herokuapp.com/exxxor/Blinker/pulls.svg?style=flat-square)](https://github.com/exxxor/Blinker/pulls) 
-[![License](https://img.shields.io/badge/license-GNU-blue.svg)](LICENSE.md)
+  ![Blinker](https://imgur.com/aS8afyM.png)
 
+  [![Hackathon](https://img.shields.io/badge/hackathon-C2C-orange.svg)](http://c2c.acmvit.in) 
+  [![Status](https://img.shields.io/badge/status-active-green.svg)]() 
+  [![Github Issues](https://img.shields.io/github/issues/kylelobo/Blinker.svg)](https://github.com/kylelobo/Blinker/issues) 
+  [![Pending Pull-Requests](https://img.shields.io/github/issues-pr/kylelobo/Blinker.svg)](https://github.com/kylelobo/Blinker/pulls) 
+  [![License](https://img.shields.io/badge/license-GNU-blue.svg)](LICENSE)
 
 </div>
-
 
 # Table of Content
 + [About](#description)
 + [Getting Started](#getting_started)
 + [Built With](#built_with)
 + [Future Scope](#future_scope)
-+ [File Structure](#file_structure)
-+ [Contributing](#contributing)
++ [Codebase Structure](/.github/CODEBASE_STRUCTURE.md)
++ [Contributing](/.github/CONTRIBUTING.md)
 + [Authors](#authors)
 
 ## About<a name="description"></a>
@@ -30,7 +28,6 @@
 + Blinking also protects the eye from irritants.
 
 ## Getting Started<a name="getting_started"></a>
-
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
@@ -81,25 +78,9 @@ The application will now be running in a window on your screen.
 ## Future Scope<a name="future_scope"></a>
 + Tracking Body Posture.
 
-## File Structure <a name="file_structure"></a>
-/        : Desktop Application code
-/engine  : Python application which implements Computer Vision <br>
-/images  : All the images used <br>
-/linkers : Connection between application and engine <br>
-/min     : Minified JS, CSS
-
-## Contributing<a name="contributing"></a>
-
-1. Fork it (<https://github.com/exxxor/Blinker/fork>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
-
 ## Authors<a name="authors"></a>
-
 + [Chaitanyakrishna Dukkipaty](https://github/chaitanyadukkipaty) <br>
 + [Kyle Lobo](https://github.com/kylelobo) <br>
 + [Roshan James](https://github.com/sephiroth7712) <br>
 
-See also the list of [contributors](https://github.com/exxxor/Blinker/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/kylelobo/Blinker/contributors) who participated in this project.
