@@ -4,8 +4,8 @@
 
   [![Hackathon](https://img.shields.io/badge/hackathon-C2C-orange.svg)](http://c2c.acmvit.in) 
   [![Status](https://img.shields.io/badge/status-active-green.svg)]() 
-  [![Github Issues](https://img.shields.io/github/issues/kylelobo/Blinker.svg)](https://github.com/kylelobo/Blinker/issues) 
-  [![Pending Pull-Requests](https://img.shields.io/github/issues-pr/kylelobo/Blinker.svg)](https://github.com/kylelobo/Blinker/pulls) 
+  [![Github Issues](https://img.shields.io/github/issues/stayh2o/Blinker.svg)](https://github.com/stayh2o/Blinker/issues) 
+  [![Pending Pull-Requests](https://img.shields.io/github/issues-pr/stayh2o/Blinker.svg)](https://github.com/stayh2o/Blinker/pulls) 
   [![License](https://img.shields.io/badge/license-GNU-blue.svg)](LICENSE)
 
 </div>
@@ -54,7 +54,7 @@ A step by step series of examples that tell you how to get a development env run
 
 Cloning the repo
 ```
-$ git clone https://github.com/exxxor/Blinker.git
+$ git clone https://github.com/stayh2o/Blinker.git
 ```
 Installing the dependencies
 ```
@@ -83,4 +83,4 @@ The application will now be running in a window on your screen.
 + [Kyle Lobo](https://github.com/kylelobo) <br>
 + [Roshan James](https://github.com/sephiroth7712) <br>
 
-See also the list of [contributors](https://github.com/kylelobo/Blinker/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/stayh2o/Blinker/contributors) who participated in this project.
